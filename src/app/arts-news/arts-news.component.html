@@ -1,0 +1,32 @@
+<section class="hero-section">
+    <div class="container">
+        <h1>Arts news</h1>
+    </div>
+</section>
+
+<section class="container py-5">
+    <div class="row">
+        <div class="col-lg-4 mb-4" *ngFor="let story of stories; let i=index">
+            <div class="news-wrapper">
+                <a class="card" href="{{story.url}}" target="_blank">
+                    <div class="position-relative">
+                        <img class="card-img-top" src="{{story.multimedia[0].url}}" onError="this.src='assets/images/on-error-img.jpg';" alt="news image">
+                        <span class="news-type">{{story.section}}</span>
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title">{{story.title}}</h5>
+                        <p class="card-text">{{story.abstract}}</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="loader" *ngIf="isDataLoad">
+        <div class="spinner-border text-warning" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,106 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
+
+$text-color: #202327;
+$text-light: #ffffff;
+$secondary-color: #fa9000;
+
+$navbar-dark-color: #1e1e1e;
+$body-bg: #f0f8ff;
+$bg-white-50: #f1f1f1;
+$bg-gradient-left: #effbf8;
+$bg-gradient-right: #0babad;
+$hero-title: #0b4813;
+
+h1 {
+    font-size: 2rem !important;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+  background-color: $body-bg;
+}
+
+//hero-section
+.hero-section {
+    padding: 2rem 0;
+    //background-color: $bg-white-50;
+    background-image: linear-gradient(to right, $bg-gradient-left, $bg-gradient-right);
+
+    h1 {
+       color: $hero-title;
+    }
+}
+
+//card-design
+.news-wrapper {
+  .card {
+    text-decoration: none;
+    color: $text-color;
+    border-radius: 1rem;
+
+    &:hover {
+      box-shadow: 0 0 .5em $secondary-color!important;
+    }
+
+    &-img-top {
+      width: 348px;
+      height: 195.75px; //16:9 ratio
+      border-top-right-radius: 1rem;
+      border-top-left-radius: 1rem;
+    }
+
+    .news-type {
+      background-color: $secondary-color;
+      color: #ffffff;
+      text-transform: uppercase;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 2px 8px;
+    }
+
+    &-body {
+      //padding-top: 0.5rem;
+    }
+
+    &-title {
+      font-size: 1.25rem;
+      font-weight: 500;
+      min-height: 78px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    &-text {
+      font-size: 0.9375rem;
+      font-weight: 400;
+      min-height: 68px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+}
+
+
+//loader
+
+.loader {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1110;
+
+    .spinner-border {
+        position: absolute;
+        left: calc(50% - 1.5rem);
+        top: calc(60% - 1.5rem);
+        z-index: 5;
+    }
+}
