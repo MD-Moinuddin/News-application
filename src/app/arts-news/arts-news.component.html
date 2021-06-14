@@ -10,7 +10,8 @@
             <div class="news-wrapper">
                 <a class="card" href="{{story.url}}" target="_blank">
                     <div class="position-relative">
-                        <img class="card-img-top" src="{{story.multimedia[0].url}}" onError="this.src='assets/images/on-error-img.jpg';" alt="news image">
+                        <img class="card-img-top" *ngIf="story.multimedia" src="{{story.multimedia[0].url}}" onError="this.src='assets/images/on-error-img.jpg';" alt="news image">
+                        <img class="card-img-top" *ngIf="!story.multimedia" src="assets/images/on-error-img.jpg" alt="news image">
                         <span class="news-type">{{story.section}}</span>
                     </div>
 

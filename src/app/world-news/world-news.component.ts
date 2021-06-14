@@ -23,6 +23,7 @@ export class WorldNewsComponent implements OnInit {
     this.topStoriesService.getWorldNews().subscribe(
       (data: TopStoryDto[]) => {
         this.stories = data;
+        console.log(this.stories);
         this.isDataLoad = false;
       },
     );

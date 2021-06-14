@@ -21,7 +21,7 @@ export class HomeNewsComponent implements OnInit {
 
   getHomeTopStories(): void {
       this.isDataLoad = true;
-      // console.log(1);
+
       this.topStoriesService.getHomeNews().subscribe(
           // the first argument is a function which runs on success
           (data: TopStoryDto[]) => {
@@ -31,6 +31,4 @@ export class HomeNewsComponent implements OnInit {
           },
       );
   }
-
-
 }

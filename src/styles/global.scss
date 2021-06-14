@@ -28,7 +28,8 @@ body {
     background-image: linear-gradient(to right, $bg-gradient-left, $bg-gradient-right);
 
     h1 {
-       color: $hero-title;
+        color: $hero-title;
+        font-weight: 600 !important;
     }
 }
 
@@ -67,7 +68,7 @@ body {
     &-title {
       font-size: 1.25rem;
       font-weight: 500;
-      min-height: 78px;
+      min-height: 75px;
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
